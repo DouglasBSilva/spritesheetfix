@@ -294,8 +294,8 @@ function processImage() {
       ) {
         var currentGroup: PixelPosition[] = [{ x: x, y: y }];
         expandPixelGroup(currentGroup, canvas.value.width, canvas.value.height, pixelData.value, separationPixel, processedPixels);
-        if(currentGroup.length <= 3) continue;
-        
+        if(currentGroup.length < 2) continue;
+
         let maxx = currentGroup.reduce((a, b) => Math.max(a, b.x), -Infinity);
         let maxy = currentGroup.reduce((a, b) => Math.max(a, b.y), -Infinity);
         let minx = currentGroup.reduce((a, b) => Math.min(a, b.x), Infinity);
