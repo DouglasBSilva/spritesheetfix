@@ -1,46 +1,26 @@
 # fixspritesheet
 
-This template should help get you started developing with Vue 3 in Vite.
+- This is a simple tool mean to create a aligned spritesheet from a previous unaligned one
 
-## Recommended IDE Setup
+- FOR NOW IT ONLY WORKS FOR TRANSPARENT BACKGROUNDS
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# Why 
 
-## Type Support for `.vue` Imports in TS
+- Some free spritesheet has bad positions and are not evenly distributed, giving some extra work 
+when trying to use them, this branch is for helping fixing it without much trouble.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- Its made for my own personal use, so Im planning to adjust it only if there is really a need to.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- But its available here to help anyone that needs some tool like that.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+# HOW TO USE
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+1- Load your spritesheet on the top left import button. (The identification will happen automatically)
+2- if there is any sprites with multiple undesired selection box you can select them and use the "MERGE" button (you can select by clicking them or clicing and draggin over them)
+3- To export you need to select the sprites that you want to group by line and click the button "Create Export Group"
+    - One sprite can only have 1 group, and each group will be exported as a different line on the new spritesheet
+4- By default All sprites are aligned by to the vertically to the bottom and horizontally to the center. 
+    - To change this you can use the checkbox on each frame. those checkbox are the anchor for the alignment. So if you want the sprite to be aligned
+    on the left bottom of the frame you should check the bottom and left checkbox. 
+5- For getting you result you can just click on the "EXPORT ALL GROUPS" button, itll generate a new spritesheet with the groups aligned and ask you
+to download it.

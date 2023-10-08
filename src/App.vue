@@ -52,7 +52,7 @@ const loadedImage = ref<HTMLImageElement>();
 const container = ref();
 const exportGroup = ref<{[key: string|number]: number}>({});
 const exportGroupId = ref(1);
-const pixelData = ref([]);
+const pixelData = ref<Uint32Array>([] as unknown as Uint32Array);
 const anchorDefault: Anchors = {
   top: false,
   bottom: true,
@@ -197,7 +197,7 @@ function generateExportImage(exportGroup: Group[][], sameLine = false) {
     imageCanvas.height = (maxLines * (maxHeight + interval)) + 1; // Tamanho máximo encontrado + 1
     imageCanvas.width = (maxColumns * (maxWidth + interval)) + 1;
 
-    var imageCtx = imageCanvas.getContext("2d", { willReadFrequently: true });
+    var imageCtx = imageCanvas.getContext("2d", { willReadFrequently: true })!;
     imageCtx.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
 
     exportGroup.forEach(function (groups, line) {
