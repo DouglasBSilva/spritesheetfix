@@ -7,7 +7,7 @@
 # Why 
 
 - Some free spritesheet has bad positions and are not evenly distributed, giving some extra work 
-when trying to use them, this branch is for helping fixing it without much trouble.
+when trying to use them, this tool is for helping fixing it without much trouble.
 
 - Its made for my own personal use, so Im planning to adjust it only if there is really a need to.
 
