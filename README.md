@@ -3,8 +3,9 @@
 - This is a simple tool mean to create a aligned spritesheet from a previous unaligned one
 
 - FOR NOW IT ONLY WORKS FOR TRANSPARENT BACKGROUNDS
+- Everything works on the JS Frontend so for something really big it can take a tool on your PC
 
-[Link text Here](https://fixspritesheet.netlify.app/)
+LINK FOR TESTING IT: [https://fixspritesheet.netlify.app/](https://fixspritesheet.netlify.app/)
 
 # Why 
 
